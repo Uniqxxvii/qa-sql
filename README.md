@@ -1,4 +1,4 @@
-# qa-sql
+# QA SQL
 Playwright + PostgreSQL minimal QA sample
 
 ## Quick start
