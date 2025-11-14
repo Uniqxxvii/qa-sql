@@ -1,4 +1,3 @@
-// tests/01_seed_and_read.spec.ts
 import { test, expect } from '@playwright/test';
 import { seed, query, closePool } from '../test-utils.js';
 import type { User } from '../types';

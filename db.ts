@@ -10,7 +10,6 @@ const pool = new Pool({
   password: process.env.PGPASSWORD || 'pass'
 });
 
-// generic query function
 export async function query<T extends QueryResultRow = any>(
   text: string,
   params?: any[]
