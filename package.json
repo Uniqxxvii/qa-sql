@@ -5,13 +5,16 @@
   "scripts": {
     "seed:docker": "docker cp seed.sql pg-qa:/seed.sql && docker exec -it pg-qa psql -U qa_user -d qa_db -f /seed.sql",
     "test": "npx playwright test",
-    "test:one": "npx playwright test tests/01_seed_and_read.test.js"
+    "test:one": "npx playwright test tests/01_seed_and_read.spec.ts"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
     "pg": "^8.16.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.56.1"
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
+    "typescript": "^5.3.0"
   }
 }
