@@ -1,0 +1,17 @@
+{
+  "name": "qa-sql",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "seed:docker": "docker cp seed.sql pg-qa:/seed.sql && docker exec -it pg-qa psql -U qa_user -d qa_db -f /seed.sql",
+    "test": "npx playwright test",
+    "test:one": "npx playwright test tests/01_seed_and_read.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1"
+  }
+}
